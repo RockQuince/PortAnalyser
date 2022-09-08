@@ -5,8 +5,8 @@ um simples programa que visa analisar e trazer as portas abertas e o serviço qu
 # Bibliotecas
 Todo projeto foi possivel utilizando as bibliotecas Socket, Sys e Threading  
   
-Estão anexados 2 versões do projeto, uma versão não utilizando a biblioteca Threading e a outra utilizando, por qual motivo?
-Eu quiz me desafiar e testar, notei que apenas utilizando a biblioteca de Socket que o scan era demasiado longo, insatisfeito, fui em busca de uma solução e me deparei com a biblioteca Threading e tentei me aventurar ao tentar entender como realmente funcionava e o resultado me surpreendeu, realmente a velocidade do portscan era aumentada em um nivel surreal comparada com a versão basica, apenas utilizando o socket, e isso me motivou a adicionar ambas versões para fins de comparação, ja que meus testes coma biblioteca Threading foi um sucesso.
+Estão anexados 2 versões do projeto, uma versão não utilizando a biblioteca Threading, a versão inicial, e a outra utilizando a biblioteca Threading, a versão final do projeto, por qual motivo manter as 2 versões? Comparação! É bom ver por onde o projeto começou e comparar como ele terminou
+Notei que apenas utilizando a biblioteca de Socket que o scan era demasiado longo, insatisfeito, fui em busca de uma solução e me deparei com a biblioteca Threading e tentei me aventurar ao tentar entender como realmente funcionava e o resultado me surpreendeu, realmente a velocidade do portscan era aumentada em um nivel surreal comparada com a inicial,  e isso me motivou a manter ambas versões para fins de comparação, ja que meus testes com a biblioteca Threading foi um sucesso.
 
 # Programa
 Ao iniciar o programa, se deparará com a solicitação de um  "IP alvo" que sera o ip na qual o portscan sera realizado
