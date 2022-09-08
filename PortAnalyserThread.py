@@ -19,6 +19,7 @@ try:
     rangestop = int(input("Digite o alcance final desejado: "))
     print("--------------------------------------------")
     print("Analizando alvo: " + alvo)
+    tinicio = datetime.now()
     print("Analize começou as:" + str(datetime.now()))
     print("--------------------------------------------")
     #Nessa etapa, defini a função "analise" para posteriormente usa-la como alvo de uma thread, a fim de acelerar o processo de scan
@@ -34,6 +35,11 @@ try:
         t=threading.Thread(target=analise,kwargs={'port':analizadas})
         analizadas+=1
         t.start()
+    tfim = datetime.now()
+    scantime=tfim-tinicio
+    print("--------------------------------------------")
+    print("Analize terminou em:", scantime)
+    print("--------------------------------------------")
     #Por fim algumas exceptions
 except KeyboardInterrupt:
         print("\n Ctrl+C foi apertado")
