@@ -18,6 +18,7 @@ try:
     rangestop = int(input("Digite o alcance final desejado: "))
     print("--------------------------------------------")
     print("Analizando alvo: " + alvo)
+    tinicio = datetime.now()
     print("Analize começou as:" + str(datetime.now()))
     print("--------------------------------------------")
     #Aqui usaremos o range ja estabelecido anteriormente
@@ -27,6 +28,11 @@ try:
         if s.connect_ex((alvo,port)) == 0:
             print("Porta {} esta aberta e o Serviço que esta sendo executado nessa porta é:".format(port)+ socket.getservbyport(port))
         s.close()
+    tfim = datetime.now()
+    scantime=tfim-tinicio
+    print("--------------------------------------------")
+    print("Analize terminou em:", scantime)
+    print("--------------------------------------------")
 except KeyboardInterrupt:
         print("\n Ctrl+C foi apertado")
         print("\n Cancelando processo e parando execussão do programa")
